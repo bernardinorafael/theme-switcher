@@ -1,0 +1,17 @@
+{
+   "extends": "@rocketseat/eslint-config/react",
+   "rules": {
+      "prettier/prettier": [
+         "error",
+         {
+            "printWidth": 95,
+            "tabWidth": 3,
+            "singleQuote": false,
+            "trailingComma": "all",
+            "semi": false,
+            "arrowParens": "always",
+            "endOfLine": "auto"
+         }
+      ]
+   }
+}
