@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { Container, Content } from "./styles"
 
 import { useContext } from "react"
@@ -18,15 +18,15 @@ export function CardProfile({ toggleTheme }: CardProfileProps) {
          <Content>
             <ReactSwitch
                checked={name === "dark"}
-               checkedIcon={false}
-               handleDiameter={20}
+               handleDiameter={40}
                offHandleColor={colors.text}
-               height={10}
+               height={30}
                offColor={colors.backgroundToggleButton}
                onChange={toggleTheme}
                onColor={colors.backgroundToggleButton}
+               width={80}
                uncheckedIcon={false}
-               width={40}
+               checkedIcon={false}
             />
             <img height={120} src={imagePerfil} alt="" />
 
@@ -34,9 +34,19 @@ export function CardProfile({ toggleTheme }: CardProfileProps) {
             <span>Desenvolvedor Front-end</span>
 
             <section>
-               <FaGithub size={30} />
-               <FaWhatsapp color="#25d365" size={30} />
-               <FaLinkedin color="#1b98e0" size={30} />
+               <a href="https://github.com/bernardinorafael" rel="noreferrer" target="_blank">
+                  <FaGithub size={30} />
+                  <p>Github</p>
+               </a>
+
+               <a
+                  href="https://www.linkedin.com/in/rafabernardino/"
+                  rel="noreferrer"
+                  target="_blank"
+               >
+                  <FaLinkedin color="#1b98e0" size={30} />
+                  <p>LinkedIn</p>
+               </a>
             </section>
          </Content>
       </Container>
